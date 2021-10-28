@@ -93,7 +93,7 @@ export default {
         // if (!reg.test(value) && value != "") {
         //   callback(new Error("请输入正确的IP地址"));
         // } else {
-        let arr = ["127.0.0.1:8088", "43.128.73.205:8088"];
+        let arr = ["43.128.73.205:8088", "43.128.73.205:8088"];
         //   console.log(arr, this, "ces");
         //   console.log(arr.indexOf(value) > -1, "arr.indexOf(value)>-1");
         if (
@@ -165,7 +165,7 @@ export default {
           value: "超级链",
           id: "1",
           Content: "超级链",
-          url: "http://127.0.0.1:8088",
+          url: "http://43.128.73.205:8088",
         },
         // {
         //   value: "超级链测试网",
@@ -327,7 +327,7 @@ export default {
   mounted() {
     this.value_url_data = JSON.parse(
       window.localStorage.getItem("value_url")
-    ) || [{ name: "超级链", url: "http://127.0.0.1:8088" }];
+    ) || [{ name: "超级链", url: "http://43.128.73.205:8088" }];
     this.valuetit = this.value_url_data[0].name;
 
     //获取vuex里面的value值

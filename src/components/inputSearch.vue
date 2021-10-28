@@ -27,12 +27,13 @@ export default {
         return;
       }
       let res = await getSearch(value);
+      console.log(res.msg);
       if (res.code == 4) {
         this.$router.push({ path: "/null", query: { id: value } });
         this.$emit("SearchValue", value);
       } else if (res.msg == "txs") {
         this.$router.push({ path: "/transaction", query: { id: value } });
-      } else if (res.msg == "") {
+      } else if (res.msg == "block") {
         this.$emit("SearchValue", value);
         this.$router.push({ path: "/blockDetails", query: { id: value } });
       } else if (res.code == 1) {
